@@ -55,16 +55,20 @@ class Graph:
         f.close()
         return cities
 
-textPath="airports.txt"
-cityList = Graph.citiesGen(textPath)
-print(cityList)
+def main():
+    textPath="airports.txt"
+    cityList = Graph.citiesGen(textPath)
+    print(cityList)
 
-adjGraph=Graph(len(cityList))
+    adjGraph=Graph(len(cityList))
 
-adjGraph.populate(cityList)
-print(adjGraph.graph[0])
-print(adjGraph.graph[1])
-adjGraph.printlist()
+    adjGraph.populate(cityList)
+    print(adjGraph.graph[0])
+    print(adjGraph.graph[1])
+    adjGraph.printlist()
 
-for i in range(adjGraph.V):
-    adjGraph.printNode(i)
+    for i in range(adjGraph.V):
+        adjGraph.printNode(i)
+
+if (__name__ == "__main__"):
+    main()
