@@ -1,4 +1,5 @@
 from flask import Flask, redirect, url_for, render_template
+from dijkstra import dijkstra_test
 #redirct and url_for allows redirect from a specific function
 #grab an html file and render it as ome page
 
@@ -9,10 +10,16 @@ app = Flask(__name__) #create instance of flask web app
 #@app.route("/") #default will go to home page. can define certain
                 #pages after '/'
 
+'''
 @app.route("/", methods=['GET','POST'])
 def index():
     return "AlgoFlights"
+'''
+@app.route("/d")
+def dynamic_page():
+    return dijkstra_test()
 
+@app.route("/", methods = ['GET','POST'])
 def home(): #returns what is being displayed on the page using html file
     return render_template("home.html") #inline html
 
