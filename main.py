@@ -3,6 +3,7 @@ from dijkstra import dijkstra_test
 from test import test
 import string
 import fibheap
+import time
 from graphGenerate import Graph
 
 
@@ -113,8 +114,10 @@ def home(): #returns what is being displayed on the page using html file
     return render_template("home.html") #inline 
 @app.route("/test", methods = ['GET','POST'])
 def test():
+    start_time = time.time() #start time of the dijkstra's alogrithm
     value,value1 = dijkstra_test()
-    return render_template("test.html", value = value, value1 = value1)
+    timeElapsed = time.time() - start_time #end time of dijkstra's algorithm
+    return render_template("test.html", value = value, value1 = value1, timeElapsed = timeElapsed) #passes the value to html file
 
 if __name__ == "main": #runs the app
     app.run(port=5000, debug = True) #allows for changes to be seen without restarting the server
