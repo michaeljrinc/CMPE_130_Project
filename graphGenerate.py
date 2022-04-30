@@ -54,21 +54,37 @@ class Graph:
           cities[i][2]=float(cities[i][2])
         f.close()
         return cities
+    
+    def getIndex(self, label):
+        for i in range(len(self.labelList)):
+            if(self.labelList[i]==label):
+                return i
+        return -1
 
 def main():
     textPath="airports.txt"
     cityList = Graph.citiesGen(textPath)
     print(cityList)
-
     adjGraph=Graph(len(cityList))
-
     adjGraph.populate(cityList)
+
     print(adjGraph.graph[0])
     print(adjGraph.graph[1])
     adjGraph.printlist()
 
     for i in range(adjGraph.V):
         adjGraph.printNode(i)
+
+def singleDemo(cityName):
+    textPath="airports.txt"
+    cityList = Graph.citiesGen(textPath)
+    adjGraph=Graph(len(cityList))
+    adjGraph.populate(cityList)
+    temp = adjGraph.getIndex(cityName)
+    if(temp == -1):
+        print("This airport is not in the provided text file")
+    else:
+        adjGraph.printNode(temp)
 
 if (__name__ == "__main__"):
     main()
