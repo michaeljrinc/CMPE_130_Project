@@ -1,5 +1,8 @@
 html{
-    background:('/static/images/airport.jpg');
+    background-image:url('/static/images/airport.jpg');
+    background-repeat: no-repeat;
+    background-size:1750px;
+
 }
 .di{
     font-size: 25px;
@@ -14,3 +17,4 @@ html{
     height:1200px;
     width:600px;
 }
+
