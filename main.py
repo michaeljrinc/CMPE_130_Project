@@ -111,7 +111,10 @@ def dynamic_page():
 
 @app.route("/", methods = ['GET','POST'])
 def home(): #returns what is being displayed on the page using html file
-    return render_template("home.html") #inline 
+    start_time = time.time() #start time of the dijkstra's alogrithm
+    value,value1 = dijkstra_test()
+    timeElapsed = time.time() - start_time #end time of dijkstra's algorithm
+    return render_template("home.html", value = value, value1 = value1, timeElapsed = timeElapsed) #passes the value to html file
 @app.route("/test", methods = ['GET','POST'])
 def test():
     start_time = time.time() #start time of the dijkstra's alogrithm

@@ -1,0 +1,16 @@
+html{
+    background:('/static/images/airport.jpg');
+}
+.di{
+    font-size: 25px;
+    font-weight: 200;
+    color:black;
+}
+
+.inputfile{
+    color:black;
+}
+.back{
+    height:1200px;
+    width:600px;
+}

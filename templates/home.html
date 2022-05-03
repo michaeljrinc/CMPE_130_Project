@@ -1,8 +1,11 @@
 <html>
     <Title>Home Page</Title>
+    <link type = "text/css" rel = "stylesheet" href = "{{ url_for('static', filename = 'styles/home.css')}}">
+    <body id = "back" background="{{ url_for('static', filename='images/airport.jpg') }}">
+
     <h1>
         <center>
-            <p style="color:blue">
+            <p style="color:white">
             AlgoFlights
             <i>
                 <p style="font-size:12px">Code Latitude Longitude</p>
@@ -17,7 +20,10 @@
             <!--specifies an input field for type(file)-->
             <!--name is used to reference the element in javascript-->
             <!--id specifies a UNIQUE id for the element-->
+            <p type = "button" id = "di" class = "di" onclick = "dijkstraAlgo()">Dijkstra</p>
+            <br><br>
             <input type = "file" name = "inputfile" id = "inputfile"> 
+            
             
             <br> <!--single line-->
             
@@ -46,4 +52,26 @@
             </script>
         </center>
     </body>
+</body> 
+    
+    
+   
+
+    <script type = "text/javascript">
+       document.getElementById("di").onclick = function(){dijkstraAlgo()};
+
+       function dijkstraAlgo(){
+            var t = document.getElementById("di");
+            t.innerHTML = 
+                `<p>Dijkstra's Algorithm</p><br>
+
+                    <body>Costs: {{value}}</body>
+                    <br>
+                    <body>Paths: {{value1}}</body>
+                    <br>
+                    <body>Time Elapesd {{timeElapsed}}</body>`;
+
+       }
+    </script>
 </html>
+
