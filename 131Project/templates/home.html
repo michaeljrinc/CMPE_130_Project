@@ -1,0 +1,49 @@
+<html>
+    <Title>Home Page</Title>
+    <h1>
+        <center>
+            <p style="color:blue">
+            AlgoFlights
+            <i>
+                <p style="font-size:12px">Code Latitude Longitude</p>
+            </i>
+            </p>
+            <!--<embed src="/airports.txt"></p>-->
+
+        </center>
+    </h1>
+    <body>
+        <center>
+            <!--specifies an input field for type(file)-->
+            <!--name is used to reference the element in javascript-->
+            <!--id specifies a UNIQUE id for the element-->
+            <input type = "file" name = "inputfile" id = "inputfile"> 
+            
+            <br> <!--single line-->
+            
+            <!--preserves the format of the text-->
+            <pre id = "output"></pre>
+
+            <!--javascript-->
+            <script type = "text/javascript">
+                //getElementById gets the inputfile
+                /*addEventListener is a function that will be called whenever the specified
+                event (change) is called*/
+                document.getElementById('inputfile').addEventListener('change',function(){
+
+                    //allows to read the file
+                    var fr = new FileReader();
+
+                    //onload contains an event handler when readAsText is executed
+                    //this function will be called whenever readAsText is called
+                    fr.onload = function(){
+                        document.getElementById('output').textContent=fr.result;
+                    }
+                    
+                    //readAsText called; above function is called
+                    fr.readAsText(this.files[0]);
+                })
+            </script>
+        </center>
+    </body>
+</html>
