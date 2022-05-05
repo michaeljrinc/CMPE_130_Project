@@ -31,7 +31,7 @@ html{
     font-size: 25px;
     font-weight: 200;
     color:color;
-    background-color: white;
+    background-image:linear-gradient(to bottom, white, rgb(88, 206, 245));
     border-width:thicker;
     border-style: solid;
     border-color:black;
@@ -48,12 +48,12 @@ html{
     font-size: 25px;
     font-weight: 200;
     background-color: white;
-    width: 200px;
+    width: 250px;
     text-align:center;
     padding-left: 0px;
     padding-right: 0px;
-    margin-top: -20px;
-    margin-left:1000px;
+    margin-top: -40px;
+    margin-left:1050px;
 }
 
 
