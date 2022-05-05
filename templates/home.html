@@ -5,6 +5,7 @@
     
         
     <div class = "Title">ALGO/FLIGHTS</div>
+    <pre class = "Name">Aaron Fleming/Joe Moules/Dixin Ding/Michael Estanilla</pre>
             <!--<embed src="/airports.txt"></p>-->
 
         
@@ -23,14 +24,15 @@
                 function dijkstraAlgo(){
                     
                      var t = document.createElement("div");
-                     t.innerHTML = `<div class = "dij"">Dijkstra's Algorithm</t><br>      
+                     t.innerHTML = `<div class = "dij"">Dijkstra's Algorithm<br>
+                                     Time Elapsed: {{timeElapsed}}<br> 
                                  {% for x in range(100): %}
                                      {% if length > x %}
                                          <p>Destination: {{paths[x]}}  &nbsp; &nbsp;    Costs: {{costs[x]}}</p>
                                      {% endif %}
                                     
                                  {% endfor %}
-                             </body>`;
+                             </div>`;
                      
                      col.appendChild(t);
          

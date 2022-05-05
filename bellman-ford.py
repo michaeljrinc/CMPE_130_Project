@@ -63,40 +63,7 @@ def bellman_ford(g: Graph, start_name: string):
 
 
 def bellman_ford_test():
-    print("--- Test 1 ---")
-    g = Graph(5)
-    matrix = [[inf,   3,   1,   5, inf],
-              [  3, inf, inf,   1, inf],
-              [  1, inf, inf, inf,   9],
-              [  5,   1, inf, inf,   2],
-              [inf, inf,   9,   2, inf]]
-    for i in range(len(matrix)):
-        g.labelList[i] = f'{i}'
-        for j in range(len(matrix[i])):
-            if (matrix[i][j] == inf):
-                continue
-            g.graph[i].append([f'{j}', matrix[i][j]])
-    costs, paths = bellman_ford(g, '0')
-    print(costs) # [0, 3, 1, 4, 6]
-    print(paths) # [['0'], ['0', '1'], ['0', '2'], ['0', '1', '3'], ['0', '1', '3', '4']]
-
-    print("--- Test 2 ---")
-    g = Graph(4)
-    matrix = [[inf,   4,   1, inf],
-              [inf, inf,   1,   2],
-              [inf,   1, inf, inf],
-              [inf, inf, inf, inf]]
-    for i in range(len(matrix)):
-        g.labelList[i] = f'{i}'
-        for j in range(len(matrix[i])):
-            if (matrix[i][j] == inf):
-                continue
-            g.graph[i].append([f'{j}', matrix[i][j]])
-    costs, paths = bellman_ford(g, '0')
-    print(costs) # [0, 2, 1, 4]
-    print(paths) # [['0'], ['0', '2', '1'], ['0', '2'], ['0', '2', '1', '3']]
-
-    print("--- Test 3 ---")
+   
     textPath="airports.txt"
     cityList = Graph.citiesGen(textPath)
     adjGraph=Graph(len(cityList))

@@ -19,6 +19,20 @@
     text-align: center;
     width:600px;
 }
+
+.Name{
+    font-family: Title;
+    margin-left: 425px;
+    margin-top: -15px;
+    font-size: 20px;
+    color:black;
+
+    
+    text-align: center;
+    width:600px;
+}
+
+
 html{
     background-image:url('/static/images/airport.jpg');
     background-repeat: no-repeat;
