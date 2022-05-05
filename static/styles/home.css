@@ -1,20 +1,84 @@
+@font-face {
+    font-family: Title;
+    src: url("AIRLINE.ttf");
+}
+@font-face {
+    font-family: Flipboard;
+    src: url("BebasNeue-Bold.otf");
+}
+
+
+.Title{
+    font-family: Title;
+    margin-left: 425px;
+    margin-top: -15px;
+    font-size: 75px;
+    color:white;
+    text-shadow: -5px 5px 5px black;
+    
+    text-align: center;
+    width:600px;
+}
 html{
     background-image:url('/static/images/airport.jpg');
     background-repeat: no-repeat;
-    background-size:1750px;
+    background-size:1400px;
+    background-attachment: fixed;
 
 }
-.di{
+.dij{
+    font-family: Flipboard;
     font-size: 25px;
     font-weight: 200;
-    color:black;
+    color:color;
+    background-color: white;
+    border-width:thicker;
+    border-style: solid;
+    border-color:black;
+    width: 500px;
+    text-align:justify;
+    padding-left: 12px;
+    padding-right: 0px;
+    margin-top: 50px;
 }
 
-.inputfile{
-    color:black;
+
+.textFile{
+    font-family: Flipboard;
+    font-size: 25px;
+    font-weight: 200;
+    background-color: white;
+    width: 200px;
+    text-align:center;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: -20px;
+    margin-left:1000px;
 }
-.back{
-    height:1200px;
-    width:600px;
+
+
+.dijButton{
+    font-family: Title;
+    font-size: 50px;
+    background-color:white;
+    border-style: solid;
+    border-width: thick;
+    border-color:black;
+    width: 510px;
+    height: 100px;
+    text-align: center;
+    cursor:pointer;
+
+}
+
+
+.inputFile{
+    font-weight: bolder;
+    color:black;
+    background-color: white;
+    margin-left: 1100px;
+    margin-top:-120px;
+    width:185px;
+
 }
 
