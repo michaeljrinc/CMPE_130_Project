@@ -67,7 +67,7 @@ html{
     padding-left: 0px;
     padding-right: 0px;
     margin-top: -40px;
-    margin-left:1050px;
+    margin-left:1100px;
 }
 
 
@@ -85,6 +85,38 @@ html{
 
 }
 
+.bell{
+    font-family: Flipboard;
+    font-size: 25px;
+    font-weight: 200;
+    color:color;
+    background-image:linear-gradient(to bottom, white, rgb(88, 206, 245));
+    border-width:thicker;
+    border-style: solid;
+    border-color:black;
+    width: 500px;
+    text-align:justify;
+    padding-left: 12px;
+    padding-right: 0px;
+  
+}
+
+.bellButton{
+    font-family: Title;
+    font-size: 50px;
+    background-color:white;
+    border-style: solid;
+    border-width: thick;
+    border-color:black;
+    width: 510px;
+    height: 100px;
+    text-align: center;
+    cursor:pointer;
+    margin-left: 40%;
+    margin-top: -196px;
+
+    
+}
 
 .inputFile{
     font-weight: bolder;

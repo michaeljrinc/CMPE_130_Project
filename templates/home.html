@@ -39,6 +39,24 @@
                 }
                
              </script>
+
+             <p type= "button" id = "bellButton" class = "bellButton" onclick = "bellAlgo()">Bellman-Ford</p>
+             <br><br>
+             <script type = "text/javascript">
+                 var col1 = document.getElementId("bellButton")
+                 function bellAlgo(){
+                     var b = document.createElement("div")
+                     b.innerHTML =  `<div class = "bell"">Bellman-Ford Algorithm<br>
+                                     Time Elapsed: {{timeElapsedBell}}<br> 
+                                 {% for x in range(100): %}
+                                     {% if length > x %}
+                                         <p>Destination: {{pathsBell[x]}}  &nbsp; &nbsp;    Costs: {{costsBell[x]}}</p>
+                                     {% endif %}
+                                 {% endfor %}
+                             </div>`;
+                     col1.appendChild(b);
+                 }
+             </script>
             <input type = "file" name = "inputfile" id = "inputfile" class = "inputFile"/> 
             
             
