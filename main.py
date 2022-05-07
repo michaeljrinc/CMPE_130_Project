@@ -163,6 +163,7 @@ def bellman_ford_test():
     costs, paths = bellman_ford(adjGraph, 'SJC')
     print(costs)
     print(paths)
+    return costs,paths
     #print("Process finished --- %s seconds ---" % (time.time() - start))
     
 @app.route("/d")
@@ -175,10 +176,13 @@ def home(): #returns what is being displayed on the page using html file
     costs,paths = dijkstra_test()
     timeElapsed = time.time() - start_time #end time of dijkstra's algorithm
     length = len(costs)
+    
     start_time_bell = time.time()
     costs_bell, paths_bell = bellman_ford_test()
     elapsedtime_bell = time.time()-start_time_bell
+
     length_bell = len(costs_bell)
+  
     startBF = time
     return render_template("home.html", costs = costs, paths = paths, timeElapsed = timeElapsed, length = length, costsBell = costs_bell, pathsBell = paths_bell, timeElapsedBell = elapsedtime_bell, lengthBell = length_bell) #passes the value to html file
 

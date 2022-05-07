@@ -22,7 +22,6 @@
                  var col = document.getElementById("dijButton");
                  
                 function dijkstraAlgo(){
-                    
                      var t = document.createElement("div");
                      t.innerHTML = `<div class = "dij"">Dijkstra's Algorithm<br>
                                      Time Elapsed: {{timeElapsed}}<br> 
@@ -43,14 +42,16 @@
              <p type= "button" id = "bellButton" class = "bellButton" onclick = "bellAlgo()">Bellman-Ford</p>
              <br><br>
              <script type = "text/javascript">
-                 var col1 = document.getElementId("bellButton")
+                 var col1 = document.getElementById("bellButton");
                  function bellAlgo(){
-                     var b = document.createElement("div")
-                     b.innerHTML =  `<div class = "bell"">Bellman-Ford Algorithm<br>
+                    console.log("Here BNell");
+
+                    var b = document.createElement("div");
+                    b.innerHTML =  `<div class = "bell">Bellman-Ford Algorithm<br>
                                      Time Elapsed: {{timeElapsedBell}}<br> 
-                                 {% for x in range(100): %}
-                                     {% if length > x %}
-                                         <p>Destination: {{pathsBell[x]}}  &nbsp; &nbsp;    Costs: {{costsBell[x]}}</p>
+                                 {% for i in range(100): %}
+                                     {% if lengthBell > i %}
+                                         <p>Destination: {{pathsBell[i]}}  &nbsp; &nbsp;    Costs: {{costsBell[i]}}</p>
                                      {% endif %}
                                  {% endfor %}
                              </div>`;
