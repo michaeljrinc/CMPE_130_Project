@@ -68,9 +68,9 @@ def bellman_ford_test():
     cityList = Graph.citiesGen(textPath)
     adjGraph=Graph(len(cityList))
     adjGraph.populate(cityList)
-    costs, paths = bellman_ford(adjGraph, 'SJC')
-    print(costs)
-    print(paths)
+    costs_bell, paths_bell = bellman_ford(adjGraph, 'SJC')
+    print(costs_bell)
+    print(paths_bell)
     print("Process finished --- %s seconds ---" % (time.time() - start))
     
     

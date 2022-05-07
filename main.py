@@ -160,9 +160,11 @@ def bellman_ford_test():
     cityList = Graph.citiesGen(textPath)
     adjGraph=Graph(len(cityList))
     adjGraph.populate(cityList)
-    costs, paths = bellman_ford(adjGraph, 'SJC')
-    print(costs)
-    print(paths)
+    costs_bell, paths_bell = bellman_ford(adjGraph, 'SJC')
+    print(costs_bell)
+    print(paths_bell)
+    return costs_bell,paths_bell
+
     #print("Process finished --- %s seconds ---" % (time.time() - start))
     
 @app.route("/d")
@@ -175,7 +177,8 @@ def home(): #returns what is being displayed on the page using html file
     costs,paths = dijkstra_test()
     timeElapsed = time.time() - start_time #end time of dijkstra's algorithm
     length = len(costs)
-    start_time_bell = time.time()
+
+    start_time_bell = time.time() #start time of the bellman ford's alogrithm
     costs_bell, paths_bell = bellman_ford_test()
     elapsedtime_bell = time.time()-start_time_bell
     length_bell = len(costs_bell)
