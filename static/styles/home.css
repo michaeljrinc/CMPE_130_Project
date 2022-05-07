@@ -67,7 +67,7 @@ html{
     padding-left: 0px;
     padding-right: 0px;
     margin-top: -40px;
-    margin-left:1100px;
+    margin-left:1115px;
 }
 
 
@@ -85,12 +85,12 @@ html{
 
 }
 
-.bell{
+.bellman{
     font-family: Flipboard;
     font-size: 25px;
     font-weight: 200;
     color:color;
-    background-image:linear-gradient(to bottom, white, rgb(88, 206, 245));
+    background-image:linear-gradient(to bottom, white, rgb(174, 221, 198));
     border-width:thicker;
     border-style: solid;
     border-color:black;
@@ -98,10 +98,13 @@ html{
     text-align:justify;
     padding-left: 12px;
     padding-right: 0px;
-  
+    margin-top: 9.75%;
+    margin-bottom: 9.75%;
+
+    
 }
 
-.bellButton{
+.bellmanButton{
     font-family: Title;
     font-size: 50px;
     background-color:white;
@@ -121,7 +124,8 @@ html{
 .inputFile{
     font-weight: bolder;
     color:black;
-    background-color: white;
+    border-width:thicker;
+    background-color: rgba(255, 255, 255, 0.887);
     margin-left: 1100px;
     margin-top:-120px;
     width:185px;

@@ -1,15 +1,9 @@
 <html>
     <Title>Home Page</Title>
     <link type = "text/css" rel = "stylesheet" href = "{{ url_for('static', filename = 'styles/home.css')}}">
-
-    
-        
     <div class = "Title">ALGO/FLIGHTS</div>
     <pre class = "Name">Aaron Fleming/Joe Moules/Dixin Ding/Michael Estanilla</pre>
             <!--<embed src="/airports.txt"></p>-->
-
-        
-    
     <body>
         
             <!--specifies an input field for type(file)-->
@@ -20,10 +14,10 @@
             <script type = "text/javascript">
                 //document.getElementById("di").onclick = function(){dijkstraAlgo()};
                  var col = document.getElementById("dijButton");
-                 
-                function dijkstraAlgo(){
+                 function dijkstraAlgo(){
                      var t = document.createElement("div");
                      t.innerHTML = `<div class = "dij"">Dijkstra's Algorithm<br>
+                                     &nbsp;&nbsp;
                                      Time Elapsed: {{timeElapsed}}<br> 
                                  {% for x in range(100): %}
                                      {% if length > x %}
@@ -39,22 +33,22 @@
                
              </script>
 
-             <p type= "button" id = "bellButton" class = "bellButton" onclick = "bellAlgo()">Bellman-Ford</p>
+             <p type= "button" id = "bellmanButton" class = "bellmanButton" onclick = "bellmanAlgo()">Bellman-Ford</p>
              <br><br>
              <script type = "text/javascript">
-                 var col1 = document.getElementById("bellButton");
-                 function bellAlgo(){
-                    console.log("Here BNell");
-
-                    var b = document.createElement("div");
-                    b.innerHTML =  `<div class = "bell">Bellman-Ford Algorithm<br>
+                 var col1 = document.getElementById("bellmanButton")
+                 function bellmanAlgo(){
+                     var b = document.createElement("div")
+                     b.innerHTML =  `<div class = "bellman"">Bellman-Ford Algorithm<br>
                                      Time Elapsed: {{timeElapsedBell}}<br> 
                                  {% for i in range(100): %}
                                      {% if lengthBell > i %}
                                          <p>Destination: {{pathsBell[i]}}  &nbsp; &nbsp;    Costs: {{costsBell[i]}}</p>
                                      {% endif %}
+
                                  {% endfor %}
                              </div>`;
+                             
                      col1.appendChild(b);
                  }
              </script>
