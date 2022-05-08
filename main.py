@@ -185,7 +185,9 @@ def home(): #returns what is being displayed on the page using html file
     length_bell = len(costs_bell)
   
     startBF = time
-    return render_template("home.html", costs = costs, paths = paths, timeElapsed = timeElapsed, length = length, costsBell = costs_bell, pathsBell = paths_bell, timeElapsedBell = elapsedtime_bell, lengthBell = length_bell) #passes the value to html file
+
+    timeDifference = elapsedtime_bell-timeElapsed
+    return render_template("home.html", timeDifference = timeDifference,costs = costs, paths = paths, timeElapsed = timeElapsed, length = length, costsBell = costs_bell, pathsBell = paths_bell, timeElapsedBell = elapsedtime_bell, lengthBell = length_bell) #passes the value to html file
 
 @app.route("/test", methods = ['GET','POST'])
 

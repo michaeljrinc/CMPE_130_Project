@@ -3,6 +3,47 @@
     <link type = "text/css" rel = "stylesheet" href = "{{ url_for('static', filename = 'styles/home.css')}}">
     <div class = "Title">ALGO/FLIGHTS</div>
     <pre class = "Name">Aaron Fleming/Joe Moules/Dixin Ding/Michael Estanilla</pre>
+
+    <body onload="startTime()">
+        <div id="txt"></div>
+
+        <script>
+        function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML = "<div class = 'txt'>" + h + ":" + m + ":" + s + "</div>";
+        setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+        }
+        </script>
+
+    </body>
+    
+        
+
+
+
+
+
+    <p type = "button" id = "time" class = "time" onclick = "showTime()">Show Time</p>
+    <script type = "text/javascript">
+        var col0 = document.getElementById("time");
+        function showTime(){
+            var s = document.createElement("div");
+            s.innerHTML = `<div class = "timeShow"> Time Difference <br>
+               {{timeDifference}} </div>`;
+            col0.appendChild(s);
+            
+        }
+    </script>
             <!--<embed src="/airports.txt"></p>-->
     <body>
         
@@ -17,7 +58,7 @@
                  function dijkstraAlgo(){
                      var t = document.createElement("div");
                      t.innerHTML = `<div class = "dij"">Dijkstra's Algorithm<br>
-                                     &nbsp;&nbsp;
+                                     &nbsp;
                                      Time Elapsed: {{timeElapsed}}<br> 
                                  {% for x in range(100): %}
                                      {% if length > x %}
