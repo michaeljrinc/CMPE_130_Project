@@ -17,7 +17,25 @@
     text-shadow: -5px 5px 5px black;
     
     text-align: center;
-    width:600px;
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+
+.Title:hover{
+    animation-play-state: running;
+    cursor: pointer;
+}
+
+@keyframes example{
+    0%  {background-color: aqua;width: 0px;}
+    25% {background-color: blue;width:200px;}
+    50% {background-color: cadetblue;width:400px;}
+    75% {background-color: cornflowerblue;width: 600px;}
+    100% {background-color: white;width:800px;}
 }
 
 .Name{
